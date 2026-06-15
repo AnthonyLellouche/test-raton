@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+# Keep DT pre-built dist (local package needed by Vercel)
+!DT/dist
 *.local
 
 # Editor directories and files
