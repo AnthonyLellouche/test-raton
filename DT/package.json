@@ -1,0 +1,107 @@
+{
+  "name": "@petank-ui/design-tokens",
+  "version": "3.3.0",
+  "description": "Design tokens for the Petank Design System",
+  "author": "Enovacom",
+  "type": "module",
+  "license": "UNLICENSED",
+  "main": "./dist/ts/base/index.js",
+  "module": "./dist/ts/base/index.js",
+  "types": "./dist/ts/base/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ts/base/index.js",
+      "default": "./dist/ts/base/index.js",
+      "types": "./dist/ts/base/index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./tokens": {
+      "types": "./dist/ts/tokens.d.ts",
+      "import": "./dist/ts/tokens.js",
+      "default": "./dist/ts/tokens.js"
+    },
+    "./radius": {
+      "import": "./dist/ts/base/radius/index.js",
+      "default": "./dist/ts/base/radius/index.js",
+      "types": "./dist/ts/base/radius/index.d.ts"
+    },
+    "./spacing": {
+      "import": "./dist/ts/base/spacing/index.js",
+      "default": "./dist/ts/base/spacing/index.js",
+      "types": "./dist/ts/base/spacing/index.d.ts"
+    },
+    "./darkAlias": {
+      "import": "./dist/ts/base/darkAlias/index.js",
+      "default": "./dist/ts/base/darkAlias/index.js",
+      "types": "./dist/ts/base/darkAlias/index.d.ts"
+    },
+    "./lightAlias": {
+      "import": "./dist/ts/base/lightAlias/index.js",
+      "default": "./dist/ts/base/lightAlias/index.js",
+      "types": "./dist/ts/base/lightAlias/index.d.ts"
+    },
+    "./darkPrimitives": {
+      "import": "./dist/ts/base/darkPrimitives/index.js",
+      "default": "./dist/ts/base/darkPrimitives/index.js",
+      "types": "./dist/ts/base/darkPrimitives/index.d.ts"
+    },
+    "./lightPrimitives": {
+      "import": "./dist/ts/base/lightPrimitives/index.js",
+      "default": "./dist/ts/base/lightPrimitives/index.js",
+      "types": "./dist/ts/base/lightPrimitives/index.d.ts"
+    },
+    "./darkTheme": {
+      "import": "./dist/ts/base/darkTheme/index.js",
+      "default": "./dist/ts/base/darkTheme/index.js",
+      "types": "./dist/ts/base/darkTheme/index.d.ts"
+    },
+    "./lightTheme": {
+      "import": "./dist/ts/base/lightTheme/index.js",
+      "default": "./dist/ts/base/lightTheme/index.js",
+      "types": "./dist/ts/base/lightTheme/index.d.ts"
+    },
+    "./typography": {
+      "import": "./dist/ts/base/typography/index.js",
+      "default": "./dist/ts/base/typography/index.js",
+      "types": "./dist/ts/base/typography/index.d.ts"
+    },
+    "./dist/css/*": "./dist/css/*"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "generate:tokens": "npm run clean && node ./build.js",
+    "clean": "rm -rf ./dist",
+    "prod": "rm -rf dist && node ./build.js",
+    "test": "echo \"No test specified\"",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://srv-git/petank-ui/design-tokens/"
+  },
+  "bugs": {
+    "url": "https://srv-git/petank-ui/design-tokens/-/issues/new"
+  },
+  "devDependencies": {
+    "@ctrl/tinycolor": "^3.4.1",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/gitlab-config": "^12.0.1",
+    "@tokens-studio/sd-transforms": "^1.1.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "prettier": "^3.3.2",
+    "semantic-release": "^24.2.3",
+    "style-dictionary": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
