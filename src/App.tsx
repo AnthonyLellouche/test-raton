@@ -1,6 +1,7 @@
 import '@petank-ui/design-tokens/dist/css/_variables.css'
 import '@petank-ui/design-tokens/dist/css/color-scheme.css'
 import './App.css'
+import { Avatar, AvatarGroup } from './Avatar'
 
 function App() {
   return (
@@ -36,6 +37,67 @@ function App() {
                 />
               </div>
             ))}
+          </div>
+        </section>
+        <section className="token-showcase">
+          <h2>Design Tokens — Avatar</h2>
+
+          <div className="avatar-showcase-group">
+            <h3 className="avatar-showcase-label">Letters</h3>
+            <div className="avatar-showcase-rows">
+              {(['blue', 'green', 'pink', 'red', 'orange', 'violet'] as const).map((color) => (
+                <div key={color} className="avatar-showcase-row">
+                  <span className="avatar-showcase-color-name">{color}</span>
+                  <div className="avatar-showcase-sizes">
+                    <Avatar size="sm" color={color} initials="AB" />
+                    <Avatar size="md" color={color} initials="AB" />
+                    <Avatar size="lg" color={color} initials="AB" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="avatar-showcase-group">
+            <h3 className="avatar-showcase-label">Icon</h3>
+            <div className="avatar-showcase-row">
+              {(['blue', 'green', 'pink', 'red', 'orange', 'violet'] as const).map((color) => (
+                <Avatar key={color} size="md" color={color} content="icon" />
+              ))}
+            </div>
+          </div>
+
+          <div className="avatar-showcase-group">
+            <h3 className="avatar-showcase-label">Group</h3>
+            <div className="avatar-showcase-row">
+              <AvatarGroup
+                size="sm"
+                avatars={[
+                  { color: 'blue', initials: 'AB' },
+                  { color: 'green', initials: 'CD' },
+                  { color: 'violet', initials: 'EF' },
+                  { color: 'pink', initials: 'GH' },
+                ]}
+              />
+              <AvatarGroup
+                size="md"
+                avatars={[
+                  { color: 'blue', initials: 'AB' },
+                  { color: 'green', initials: 'CD' },
+                  { color: 'violet', initials: 'EF' },
+                  { color: 'pink', initials: 'GH' },
+                ]}
+              />
+              <AvatarGroup
+                size="lg"
+                avatars={[
+                  { color: 'blue', initials: 'AB' },
+                  { color: 'green', initials: 'CD' },
+                  { color: 'violet', initials: 'EF' },
+                  { color: 'pink', initials: 'GH' },
+                ]}
+              />
+            </div>
           </div>
         </section>
       </main>
